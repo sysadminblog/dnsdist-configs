@@ -41,7 +41,7 @@ function orderedLeastOutstanding(servers, dq)
 	while servers[i] do
 
 		-- We only care if the server is currently up
-		if (servers[i].upStatus == true) then
+		if (servers[i]:isUp()) then
 
 			-- Retrieve the order for the server
 			order = servers[i].order
